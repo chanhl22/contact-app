@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-const LifeCyclePage: React.FC = () => {
+const LifeCycle1Page: React.FC = () => {
     console.log("리액트 실행순서 - 1. 컴포넌트 최상단")
 
     useEffect(() => {
@@ -18,4 +18,4 @@ const LifeCyclePage: React.FC = () => {
     );
 };
 
-export default LifeCyclePage;
+export default LifeCycle1Page;
