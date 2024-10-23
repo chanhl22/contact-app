@@ -5,6 +5,9 @@ const GrammarPage: React.FC = () => {
     const [myString, setMyString] = useState<string>();
     const { input } = useParams()
 
+    /**
+     * split의 동작 방식
+     */
     useEffect(() => {
         // setMyString(input || '');
         setMyString(input);
@@ -21,6 +24,16 @@ const GrammarPage: React.FC = () => {
     let result2 = myString ? myString.split('||') : [];
     console.log('result2:');
     console.log(result2);
+
+    /**
+     * every / some
+     */
+    const numbers = [2, 4, 6, 7];
+    const allEven = numbers.every(num => num % 2 === 0);
+    console.log(`every: ${allEven}`); // false, 모든 숫자가 짝수가 아니기 때문에 false
+
+    const oneEven = numbers.some(num => num % 2 === 0);
+    console.log(`some: ${oneEven}`); // true, 하나의 숫자라도 짝수이기 때문에 true
 
     return (
         <div>
