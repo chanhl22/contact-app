@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import UseEffectProps from "./UseEffectProps";
 
 
@@ -8,18 +8,18 @@ export interface Question {
 }
 
 const UseEffectPropsPage: React.FC = () => {
-    const [value, setValue] = useState<number>(10);
+    const [question, setQuestion] = useState<Question>();
 
-    const question = {questionId: 200, answerValue: "테스트"};
+    useEffect(() => {
+        setQuestion({questionId: 200, answerValue: "테스트"})
+    }, []);
 
-    console.log('value > ' + value)
     console.log('question > ')
     console.log(question)
 
     return (
         <div>
             <UseEffectProps
-                value={value}
                 question={question}
             />
         </div>
