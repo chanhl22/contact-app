@@ -14,6 +14,7 @@ const UseEffectProps: React.FC<UseEffectPropsProps> = ({ question }) => {
     useEffect(() => {
         if (question) {
             question.answerValue = currentValue;
+            console.log('변경 question > ')
             console.log(question);
         }
     }, [question]);
