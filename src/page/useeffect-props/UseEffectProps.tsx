@@ -32,13 +32,13 @@ const UseEffectProps = ({ question }: UseEffectPropsProps) => {
     }
 
     // 4, 10
-    return question && (
+    return question ? (
         <div>
             <p>Question: {question.questionId}</p>
             <p>Question: {question.answerValue}</p>
             <button onClick={handle}>버튼</button>
         </div>
-    );
+    ) : null;
 };
 
 export default UseEffectProps;

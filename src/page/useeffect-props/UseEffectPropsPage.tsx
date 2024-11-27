@@ -8,7 +8,7 @@ export interface Question {
 
 const UseEffectPropsPage: React.FC = () => {
     // 1, 7
-    const [question, setQuestion] = useState<Question>();
+    const [question, setQuestion] = useState<Question | undefined>();
 
     // 6
     useEffect(() => {
